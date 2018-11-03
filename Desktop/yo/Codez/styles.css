@@ -1,21 +1,29 @@
 body {
-  background: white;
-  max-width: 960px;
+  background: #f2f2f2;
+  max-width: 980px;
+  width: 100%;
+
+}
+
+.navbar {
+  padding-top: 20px;
 }
 
 p {
-  font-size: 25px;
+  font-family: open sans;
+  font-size: 1.25em;
 }
 
 h1 {
-  font-family: Montserrat;
+  font-family: 'Kaushan Script', cursive;
   font-weight: 900;
   font-size: 5em;
-  color: aqua;
+  color: white;
 }
 
 h2 {
-  font-family: georgia;
+  font-family: Montserrat;
+  text-transform: lowercase;
   color: white;
   font-size: 2em;
 }
@@ -25,52 +33,68 @@ h2 {
 
 }
 
+.wrapper {
+
+}
+
 .banner {
   height: 100vh;
-  padding: 20px;
-  background: url(http://i1356.photobucket.com/albums/q725/aef538/christian-van-bebber-144485-unsplash_zpsdpmb4uy7.jpg);
+  padding: 10px;
+  background: url(images/shifaaz-shamoon-1113382-unsplash.jpg);
   background-position: bottom;
   background-size: cover;
 }
 
+i {
+font-size: 2.5em;
+padding: 15px;
+display: flex;
+color: white;
+}
+
 .aboutMe {
-  height: 300px;
+  height: auto;
   background: gray;
   padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .project {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  height: 300px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
   padding: 15px;
   background-color: lightgray;
 }
 
-article {
+.proj {
   margin-top: 20px;
   margin-left: 20px;
   padding: 20px;
-  background-color: blue;
+  background-color: gray;
   flex: 1;
+  border-radius: 5%;
 }
 
-nav ul {
-  font-family: opensans;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  max-width: 960px;
-  list-style-type: none;
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
-li a{
+/* li a{
   padding: 40px;
   font-size: 20px;
   text-decoration: none;
   color: black;
-}
+} */
 
 article {
   flex: 1;
@@ -79,35 +103,40 @@ article {
 }
 
 footer {
-
+  display: flex;
+  color: black;
+  justify-content: center;
+  background-color: #f2f2f2;
 }
 
-i {
+footer i {
   font-size: 2.5em;
   padding: 15px;
   display: flex;
-  color: white;
-}
-
-i:visited {
-  color: white;
+  color: black;
 }
 
 li {
   text-transform: uppercase;
-  font-family: open sans;
+  font-family: Montserrat;
 
 }
 
-@media only screen and (max-width: 600px) {
+/*mobiles*/
+
+@media only screen and (max-width: 480px) {
+  body {
+    width: 100%;
+  }
+
   h1 {
-    font-family: Montserrat;
+    font-family: 'Kaushan Script', cursive;
     font-weight: 900;
     font-size: 5em;
-    color: aqua;
+    color: white;
     }
   h2 {
-    font-family: georgia;
+    font-family: montserrat;
     color: white;
     font-size: 2em;
   }
@@ -115,15 +144,75 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 300px;
+  height: auto;
   padding: 15px;
   background-color: lightgray;
 }
+
   .proj {
     width: 300px;
     height: 300px;
   }
   p {
     font-size: 1.25em;
+    font-family: open sans;
+  }
+  i {
+    font-size: 2em;
+  }
+}
+
+
+/*hamburger*/
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
   }
 }
