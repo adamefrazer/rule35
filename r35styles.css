@@ -7,22 +7,28 @@ body {
   max-width: 960px;
 }
 
+h1, h2 {
+  font-family: 'Noto Sans', sans-serif;
 
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
 
 .container {
   display: grid;
-  grid-template-rows:    80px 300px 100px 100px 100px 80px;
+  grid-template-rows:  100px 100px 100px 80px;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "navbar navbar navbar"
-                       "one one one"
+  grid-template-areas: "one one one"
                        "two two two"
                        "partOne partTwo partThree"
                        "footer footer footer";
 }
 
 .navi {
-  grid-area: navbar;
-  background-color: white;
+
+  background-color: green;
 }
 
 .rule {
@@ -77,34 +83,33 @@ body {
     background-color: #F09A9D; /* Red */
   }
 
-  .container {
-    grid-template-areas: "navbar"
-                         "one"
-                         "two"
-                         "partOne"
-                         "partTwo"
-                         "partThree"
-                         "footer";
 
-    grid-template-columns: 1fr;
-    grid-template-rows: 80px 1fr 1fr 1fr 1fr 1fr 1fr;
-  }
+
+
+
+.container {
+  grid-template-areas: "one"
+                       "two"
+                       "partOne"
+                       "partTwo"
+                       "partThree"
+                       "footer";
+
+  grid-template-columns: 1fr;
+  grid-template-rows:   1fr 1fr 1fr 1fr 1fr 1fr;
+}
 
   .statement {
-      border-bottom: 2px black solid;
       padding: 20px;
   }
 
   .Arsenal {
-      border-bottom: 2px black solid;
   }
 
   .Bournemouth {
-      border-bottom: 2px black solid;
   }
 
   .Chelsea {
-      border-bottom: 2px black solid;
   }
 }
 
@@ -122,23 +127,18 @@ body {
   }
 
   .statement {
-      border-bottom: 2px black solid;
-      border-right: 2px black solid;
       padding: 20px;
   }
 
   .Arsenal {
-      border-bottom: 2px black solid;
   }
 
   .Bournemouth {
-      border-bottom: 2px black solid;
-      border-right: 2px black solid;
+
       height: auto;
   }
 
   .Chelsea {
-      border-bottom: 2px black solid;
       height: auto;
   }
 
