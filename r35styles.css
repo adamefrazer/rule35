@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+
+
+.container {
+  display: grid;
+  grid-template-rows:    80px 300px 100px 100px 100px 80px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "navbar navbar navbar"
+                       "one one one"
+                       "two two two"
+                       "partOne partTwo partThree"
+                       "footer footer footer";
+}
+
+.navi {
+  grid-area: navbar;
+  background-color: white;
+}
+
+.rule {
+  grid-area: one;
+  background-color: white;
+  background-image: url("images/DSC_3415.JPG");
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.statement {
+  grid-area: two;
+  background-color: white;
+  height: auto;
+}
+
+.Arsenal {
+  grid-area: partOne;
+  background-color: white;
+  padding: 30px;
+  height: auto;
+}
+
+.Bournemouth {
+  grid-area: partTwo;
+  background-color: white;
+  padding: 30px;
+  height: auto;
+}
+
+.Chelsea {
+  grid-area: partThree;
+  background-color: white;
+  padding: 30px;
+  height: auto;
+
+}
+
+.footer {
+  grid-area: footer;
+  background-color: white;
+
+}
+
+
+
+/*  mobiles */
+@media only screen and (max-width: 400px) {
+  body {
+    background-color: #F09A9D; /* Red */
+  }
+
+  .container {
+    grid-template-areas: "navbar"
+                         "one"
+                         "two"
+                         "partOne"
+                         "partTwo"
+                         "partThree"
+                         "footer";
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .statement {
+      border-bottom: 2px black solid;
+      padding: 20px;
+  }
+
+  .Arsenal {
+      border-bottom: 2px black solid;
+  }
+
+  .Bournemouth {
+      border-bottom: 2px black solid;
+  }
+
+  .Chelsea {
+      border-bottom: 2px black solid;
+  }
+}
+
+/*  tablets */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  .container {
+    grid-template-areas: "navbar navbar"
+                         "one one"
+                         "two partOne"
+                         "partTwo partThree"
+                         "footer footer";
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 1fr 1fr 1fr 1fr;
+  }
+
+  .statement {
+      border-bottom: 2px black solid;
+      border-right: 2px black solid;
+      padding: 20px;
+  }
+
+  .Arsenal {
+      border-bottom: 2px black solid;
+  }
+
+  .Bournemouth {
+      border-bottom: 2px black solid;
+      border-right: 2px black solid;
+      height: auto;
+  }
+
+  .Chelsea {
+      border-bottom: 2px black solid;
+      height: auto;
+  }
+
+}
